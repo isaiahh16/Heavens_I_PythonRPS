@@ -1,47 +1,38 @@
 from random import randint
+from gameFunctions import winlose, gameVars, compare
 
-choices=["rock", "paper", "scissors"]
 
-computer=choices[randint(0,2)]
-
-#set up a game loop here so we dont have to keep restarting
-player = False
-
-while player is False:
+while gameVars.player is False:
+	print("========================================")
+	print("Computer Lives:", gameVars.computer_lives, "/", gameVars.total_lives)
+	print("Computer Lives:", gameVars.player_lives, "/", gameVars.total_lives)
+	print("========================================")
+	print("Choose your weapon!\n")
 	player=input("choose rock, paper or scissors: \n")
 
-	print("computer: ", computer, "player: ", player)
+	if  gameVars.player_lives is 0:
+		winlose.winorlose("lost")
+	# 	print("You lost! Would you like to play again?")
+	# 	choice = input("Y / N")
 
-#print(computer, player)
-#
-#start doing some logic and condition checking
-#always check a breking condition first
-	if player == computer:
-	#we have a tie, no point in going any further
-		print("tie, no one wins! try again")
-	
-	elif player == "quit":
-		print("you chose to quit, quitter.")
-		exit()
-	
-	elif player == "rock":
-		if computer == "paper":
-			print("You Lose!", computer, "covers", player, "\n")
-		else:
-			print("You Won!", player, "smashes", computer, "\n")
+	elif gameVars.computer_lives is 0:
+		 winlose.winorlose("won")
+	# 	print("You won! Would you like to play again?")
+	# 	choice = input("Y / N")
 
-	elif player == "paper":
-		if computer == "scissors":
-			print("You Lose!", computer, "cuts", player, "\n")
-		else:
-			print("You Won!", player, "covers", computer, "\n")
+	# 	if choice == "Y" or choice == "y":
+	# 		#reseth the game
+	# 		player_lives = 1
+	# 		gameVars.computer_lives = 1
+	# 		player = False
+	# 		gameVars.computer = choices[randint(0, 2)]
 
-	elif player == "scissors":
-		if computer == "rock":
-			print("You Lose!", computer, "smashes", player, "\n")
-		else:
-			print("You Won!", player, "cuts", computer, "\n")
+	# 	elif choice == "N" or choice == "n":
+	# 		print("You chose to quit. Better luck next time.")
+	# 		exit()
+	# 	else:
+	# 		print("Make a valid choice. Yes or No.")
 
-
-	player = False
-	computer=choices[randint(0,2)]
+	else:
+		player = False
+		gameVars.computer=gameVars.choices[randint(0,2)]
