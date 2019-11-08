@@ -3,9 +3,9 @@ from random import randint
 choices=["rock", "paper", "scissors"]
 
 #adding lives: when one or the other gets 0, win / lose
-player_lives = 1
-computer_lives = 1
-total_lives = 1
+player_lives = 5
+computer_lives = 5
+total_lives = 5
 
 #let the ai make a choice
 computer=choices[randint(0, 2)]
