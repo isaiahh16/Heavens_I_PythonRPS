@@ -1,11 +1,10 @@
-from random import randint
-from gameFunctions import winlose, gameVars
+from gameFunctions import gameVars
 
+# figure out what to pass into the function => what are you comparing
+#
+def compareChoices(player):
+	if  player == gameVars.computer:
 
-#start doing some logic and condition checking
-#always check a breking condition first
-if player == gameVars.computer:
-	#we have a tie, no point in going any further
 		print("tie, no one wins! try again")
 	
 	elif player == "quit":

@@ -8,8 +8,8 @@ def winorlose(status):
 
 	if choice == "Y" or choice == "y":
 			#reseth the game
-			gameVars.player_lives = 1
-			gameVars.computer_lives = 1
+			gameVars.player_lives = 5
+			gameVars.computer_lives = 5
 			player = False
 			gameVars.computer = gameVars.choices[randint(0, 2)]
 
