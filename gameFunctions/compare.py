@@ -5,8 +5,12 @@ from gameFunctions import gameVars
 def compareChoices(player):
 	if  player == gameVars.computer:
 
+<<<<<<< HEAD
 		print('\033[2J')
 		print("\033[1;36;40mTie, no one wins!",("\U0001F610\n"))
+=======
+		print("\033[1;36;40mtie, no one wins! try again.")
+>>>>>>> master
 	
 	elif player == "quit":
 		print('\033[2J')
@@ -15,30 +19,51 @@ def compareChoices(player):
 	
 	elif player == "rock":
 		if gameVars.computer == "paper":
+<<<<<<< HEAD
 			print('\033[2J')
 			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "covers", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print('\033[2J')
 			print("\033[1;32;40mYou Won!",("\U0001F603"), player, "smashes", gameVars.computer, "\n")
+=======
+			print("\033[1;31;40mYou Lose!", gameVars.computer, "covers", player, "\n")
+			gameVars.player_lives = gameVars.player_lives -1
+		else:
+			print("\033[1;32;40mYou Won!", player, "smashes", gameVars.computer, "\n")
+>>>>>>> master
 			gameVars.computer_lives = gameVars.computer_lives -1
 
 	elif player == "paper":
 		if gameVars.computer == "scissors":
+<<<<<<< HEAD
 			print('\033[2J')
 			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "cuts", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print('\033[2J')
 			print("\033[1;32;40mYou Won!",("\U0001F603"), player, "covers", gameVars.computer, "\n")
+=======
+			print("1;31;40mYou Lose!", gameVars.computer, "cuts", player, "\n")
+			gameVars.player_lives = gameVars.player_lives -1
+		else:
+			print("\033[1;32;40mYou Won!", player, "covers", gameVars.computer, "\n")
+>>>>>>> master
 			gameVars.computer_lives = gameVars.computer_lives -1
 
 	elif player == "scissors":
 		if gameVars.computer == "rock":
+<<<<<<< HEAD
 			print('\033[2J')
 			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "smashes", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print('\033[2J')
 			print("\033[1;32;40mYou Won!"("\U0001F603"), player, "cuts", gameVars.computer, "\n")
+=======
+			print("1;31;40mYou Lose!", gameVars.computer, "smashes", player, "\n")
+			gameVars.player_lives = gameVars.player_lives -1
+		else:
+			print("\033[1;32;40mYou Won!", player, "cuts", gameVars.computer, "\n")
+>>>>>>> master
 			gameVars.computer_lives = gameVars.computer_lives -1
