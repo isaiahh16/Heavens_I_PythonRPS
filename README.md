@@ -1,5 +1,5 @@
 # Rock Paper Scissors - Python text-based on  a classic!
-![Rock Paper Scissors](rps)
+![Rock Paper Scissors](rps.png)
 Pick your weapon and play against the computer - youll only get a virtual sting if you lose!
 
 Prerequisites: all you need is [python 3](https://www.python.org) to play.
