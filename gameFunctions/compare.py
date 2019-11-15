@@ -5,32 +5,40 @@ from gameFunctions import gameVars
 def compareChoices(player):
 	if  player == gameVars.computer:
 
-		print("tie, no one wins! try again")
+		print('\033[2J')
+		print("\033[1;36;40mTie, no one wins!",("\U0001F610\n"))
 	
 	elif player == "quit":
-		print("you chose to quit, quitter.")
+		print('\033[2J')
+		print("you chose to quit, quitter.",("\U0001F602"))
 		exit()
 	
 	elif player == "rock":
 		if gameVars.computer == "paper":
-			print("You Lose!", gameVars.computer, "covers", player, "\n")
+			print('\033[2J')
+			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "covers", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You Won!", player, "smashes", gameVars.computer, "\n")
+			print('\033[2J')
+			print("\033[1;32;40mYou Won!",("\U0001F603"), player, "smashes", gameVars.computer, "\n")
 			gameVars.computer_lives = gameVars.computer_lives -1
 
 	elif player == "paper":
 		if gameVars.computer == "scissors":
-			print("You Lose!", gameVars.computer, "cuts", player, "\n")
+			print('\033[2J')
+			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "cuts", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You Won!", player, "covers", gameVars.computer, "\n")
+			print('\033[2J')
+			print("\033[1;32;40mYou Won!",("\U0001F603"), player, "covers", gameVars.computer, "\n")
 			gameVars.computer_lives = gameVars.computer_lives -1
 
 	elif player == "scissors":
 		if gameVars.computer == "rock":
-			print("You Lose!", gameVars.computer, "smashes", player, "\n")
+			print('\033[2J')
+			print("\033[1;31;40mYou Lose!",("\U0001F614"), gameVars.computer, "smashes", player, "\n")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You Won!", player, "cuts", gameVars.computer, "\n")
+			print('\033[2J')
+			print("\033[1;32;40mYou Won!"("\U0001F603"), player, "cuts", gameVars.computer, "\n")
 			gameVars.computer_lives = gameVars.computer_lives -1
