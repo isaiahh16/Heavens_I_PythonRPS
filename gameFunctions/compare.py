@@ -40,5 +40,5 @@ def compareChoices(player):
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print('\033[2J')
-			print("\033[1;32;40mYou Won!"("\U0001F603"), player, "cuts", gameVars.computer, "\n")
+			print("\033[1;32;40mYou Won!",("\U0001F603"), player, "cuts", gameVars.computer, "\n")
 			gameVars.computer_lives = gameVars.computer_lives -1
